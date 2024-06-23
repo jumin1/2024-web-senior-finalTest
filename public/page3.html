@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Page 3</title>
   <link rel="stylesheet" href="styles3.css">
 </head>
@@ -41,9 +41,7 @@
       });
 
       function searchOnNaverMap(food) {
-        // 네이버 지도 검색 URL 구성
         const searchUrl = `https://map.naver.com/?query=${encodeURIComponent(food)}`;
-        // 새 창 열기
         window.open(searchUrl, '_blank');
       }
     });

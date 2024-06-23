@@ -6,10 +6,6 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/api/page1', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'page1.html'));
-//   });
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'page1.html'));
 });

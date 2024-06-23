@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 이메일 형식 검증(regex 정규식 사용)과 페이지 이동 기능
+  // regex 정규식을 사용하여 이메일 검증 구현
   const emailInput = document.getElementById("emailInput");
   const checkButton = document.getElementById("checkButton");
   const message = document.getElementById("message");
