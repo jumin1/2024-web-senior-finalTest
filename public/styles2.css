@@ -1,0 +1,41 @@
+body {
+  background-image: url('../images/backFood2.jpg');
+  color: black;
+  text-align: center;
+  margin-top: 100pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.container {
+  width: 25%;
+  background-color: rgba(255,255,255,0.7);
+  margin-top: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  margin-top: 20pt;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 13px 40px;
+  margin-top: 30pt;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page 3</title>
+  <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>이 메뉴는 어떠세요?</h1>
+    <p id="foodName">삼겹살</p>
+    <div class="changeBtn">
+      <button class="foodBtn" id="foodButton">다른 음식</button>
+      <button class="confirmBtn" id="confirmButton">음식확정</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const foods = ["삼겹살", "초밥", "치킨", "돼지갈비", "회", "김치찌개", "라면", "육회", "김치찜", "소고기", "된장찌개", "감자탕", "곱창", "보쌈", "대게", "떡순튀", "샤브샤브", "돼지국밥", "햄버거", "닭발", "닭갈비", "볶음밥", "순대국", "족발", "제육볶음", "돈까스", "피자", "냉면", "칼국수", "갈비탕", "연어덮밥", "짜장면", "양꼬치", "파스타", "순두부찌개", "물회", "육개장", "마라탕", "꿔바로우", "김밥", "아구찜", "훠궈", "쭈꾸미볶음", "누룽지백숙", "쌀국수"];
+      let currentSlide = 0;
+      const foodNameElement = document.getElementById("foodName");
+
+      function changeFood() {
+        currentSlide++;
+        if (currentSlide >= foods.length) {
+          currentSlide = 0;
+        }
+        foodNameElement.textContent = foods[currentSlide];
+      }
+
+      const foodButton = document.getElementById("foodButton");
+      foodButton.addEventListener("click", changeFood);
+
+      const confirmButton = document.getElementById("confirmButton");
+      confirmButton.addEventListener("click", () => {
+        const selectedFood = foods[currentSlide];
+        searchOnNaverMap(selectedFood);
+      });
+
+      function searchOnNaverMap(food) {
+        // 네이버 지도 검색 URL 구성
+        const searchUrl = `https://map.naver.com/?query=${encodeURIComponent(food)}`;
+        // 새 창 열기
+        window.open(searchUrl, '_blank');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    background-image: url('../images/backFood1.jpg');
+    color: black;
+    text-align: center;
+    margin-top: 100pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.container {
+    background-color: rgba(255,255,255,0.7);
+    width: 21%;
+    height: 20%;
+    padding: 30px;
+}
+p {
+    margin-top: 30pt;
+}
+.button {
+    padding: 13px 30px;
+    margin-top: 30pt;
+    font-size: 20px;
+    cursor: pointer;
+}
